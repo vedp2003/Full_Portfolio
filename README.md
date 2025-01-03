@@ -51,4 +51,42 @@ This folder contains the Sanity CMS backend setup.
 
 ---
 
+---
+
+## 🚀 Running the Project Locally
+
+Follow these steps to set up and run the project locally:
+
+### **Prerequisites**
+Ensure you have the following installed on your machine:
+- [Node.js](https://nodejs.org/) (version 16 or later)
+- [npm](https://www.npmjs.com/) 
+- [Sanity CLI](https://www.sanity.io/docs/getting-started-with-sanity-cli) (optional, but recommended)
+
+---
+
+1. **Clone the Repository**
+    Clone the repository to your local machine:
+    ```bash
+    git clone https://github.com/vedp2003/Full_Portfolio.git
+    cd Full_Portfolio
+   
+2. . **Set Up the Frontend (CS Portfolio)**:
+   Navigate to the cs_portfolio directory, install dependencies, and Start the React development server:
+   ```bash
+   cd ../cs_portfolio
+   npm install
+   npm start
+
+3. **Set Up the Backend (Sanity Backend)**:
+   Navigate to the sanity_backend directory and Start the Sanity development server:
+    ```bash
+    cd ../sanity_backend
+    npm install
+    npx sanity dev
+    
+4. **Access Servers**:
+  Access the frontend at http://localhost:3000
+  Use the backend Studio at http://localhost:3333 to manage content
+
 
