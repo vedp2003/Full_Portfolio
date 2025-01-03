@@ -80,7 +80,13 @@ const Projects = () => {
             </div>
             <div className="project-content">
               <h2 className="project-title">{project.title}</h2>
-              <p className="project-description">{project.description}</p>
+              <div className="project-description">
+                {project.description.split('\n').map((line, index) => (
+                  <p key={index} style={{ marginBottom: '1rem' }}>
+                    {line.trim() || <br />} {}
+                  </p>
+                ))}
+              </div>
               <div className="tags">
                 {project.tags.map((tag, i) => (
                   <span key={i} className="tag">
