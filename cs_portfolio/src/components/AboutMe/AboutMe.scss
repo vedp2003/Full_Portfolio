@@ -1,0 +1,186 @@
+.about-me-section {
+    padding: 3rem;
+    background: #eafaf1; /* Light green background for About Me */
+    text-align: center;
+  
+    .about-me-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 3rem;
+  
+      .about-me-left,
+      .about-me-right {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      }
+  
+      .about-me-center {
+        max-width: 800px;
+        text-align: center;
+  
+        .about-me-title {
+          font-size: 3.5rem;
+          margin-bottom: 1rem;
+          color: #333;
+          font-weight: bold;
+          font-family: "Poppins", sans-serif;
+          background: black;
+          background-clip: content-box;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+  
+        .about-me-description {
+          max-width: 700px;
+          margin: 0 auto 2rem;
+          font-size: 1.5rem;
+          color: #555;
+          font-family: "Roboto", sans-serif;
+          line-height: 1.8;
+        }
+      }
+  
+      .highlight-card {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 10px;
+        text-align: center;
+        width: 220px;
+        min-height: 280px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+        animation: colorChange 5s infinite;
+  
+        &:hover {
+          transform: scale(1.1);
+          box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+  
+        @keyframes colorChange {
+          0% {
+            background: #ffecb3;
+          }
+          25% {
+            background: #b3e5fc;
+          }
+          50% {
+            background: #dcedc8;
+          }
+          75% {
+            background: #ffcdd2;
+          }
+          100% {
+            background: #ffecb3;
+          }
+        }
+  
+        .highlight-image {
+          width: 80px;
+          height: 80px;
+          object-fit: contain;
+          margin: 0 auto 1rem;
+        }
+  
+        .highlight-title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          color: #333;
+          font-family: "Poppins", sans-serif;
+        }
+  
+        .highlight-description {
+          font-size: 1rem;
+          color: #666;
+          font-family: "Roboto", sans-serif;
+        }
+      }
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: center;
+  
+        .about-me-left,
+        .about-me-right {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 1rem;
+        }
+  
+        .about-me-center {
+          margin-bottom: 2rem;
+        }
+  
+        .highlight-card {
+          width: 100%;
+          max-width: 300px;
+        }
+      }
+  
+      @media (min-width: 1024px) {
+        gap: 3rem;
+  
+        .highlight-card {
+          width: 260px;
+          min-height: 320px; 
+          .highlight-image {
+            width: 100px;
+            height: 100px;
+          }
+          .highlight-title {
+            font-size: 1.8rem; 
+          }
+          .highlight-description {
+            font-size: 1.2rem;
+          }
+        }
+  
+        .about-me-center {
+          max-width: 1000px;
+          .about-me-title {
+            font-size: 4rem; 
+          }
+          .about-me-description {
+            font-size: 1.6rem; 
+          }
+        }
+      }
+  
+      @media (min-width: 1200px) {
+        gap: 4rem;
+  
+        .highlight-card {
+          width: 300px; 
+          min-height: 360px;
+          .highlight-image {
+            width: 120px; 
+            height: 120px;
+          }
+          .highlight-title {
+            font-size: 2rem; 
+          }
+          .highlight-description {
+            font-size: 1.3rem;
+          }
+        }
+  
+        .about-me-center {
+          max-width: 1200px;
+          .about-me-title {
+            font-size: 4.5rem; 
+          }
+          .about-me-description {
+            font-size: 1.7rem; 
+          }
+        }
+      }
+    }
+  }
+  

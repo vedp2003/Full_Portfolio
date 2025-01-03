@@ -1,0 +1,94 @@
+.skills-section {
+    padding: 3rem;
+    background: #f7f7f7;
+    text-align: center;
+  
+    .my-skills-container {
+      background-color: #f0f4ff; /* Light blue for contrast */
+      padding: 2rem;
+      border-radius: 10px;
+  
+      .my-skills-title {
+        font-size: 3rem; 
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #333;
+        font-family: "Poppins", sans-serif;
+      }
+  
+      /* Tab Bar */
+      .skills-tab-bar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 2rem;
+  
+        .tab-button {
+          background: #fff;
+          border: 2px solid #ddd;
+          padding: 0.7rem 1.5rem;
+          border-radius: 20px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          font-weight: bold;
+          transition: all 0.3s ease;
+          color: #555;
+          font-family: "Roboto", sans-serif;
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  
+          &:hover {
+            color: #4a90e2;
+            transform: scale(1.05);
+            border-color: #4a90e2;
+          }
+  
+          &.active {
+            background: #4a90e2;
+            color: white;
+            border-color: #4a90e2;
+          }
+        }
+      }
+  
+      /* Skills Grid */
+      .skills-display {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 2rem;
+        justify-items: center;
+  
+        .skill-card {
+          background: #7a7777;
+          border-radius: 12px;
+          padding: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: all 0.3s ease;
+          font-family: "Roboto", sans-serif;
+  
+          &:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+          }
+  
+          .skill-icon {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 0.5rem;
+          }
+  
+          .skill-name {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #2e0303;
+          }
+        }
+      }
+    }
+  }
+  

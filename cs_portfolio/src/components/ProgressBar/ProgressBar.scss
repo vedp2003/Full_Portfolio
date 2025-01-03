@@ -1,0 +1,31 @@
+.progress-bar {
+    position: fixed;
+    top: 50%;
+    right: 1rem; /* Move to the right-hand side */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1000; /* Ensure it overlays content */
+  
+    .progress-dot {
+      width: 12px;
+      height: 12px;
+      background: #4e4c67; /* Default color */
+      border-radius: 50%;
+      transition: background 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+      &.active {
+        background: #ff6f91; /* Highlighted color */
+        transform: scale(1.2); /* Enlarge the active dot */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+  
+      &:hover {
+        background: #ff9671;
+        cursor: pointer;
+      }
+    }
+  }
+  

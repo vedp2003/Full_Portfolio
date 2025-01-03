@@ -1,0 +1,132 @@
+.introduction {
+  background: linear-gradient(to bottom, #141414, #212121);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Adjust layout for mobile */
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  .text-container {
+    flex: 1;
+
+    .introduction-text {
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        font-family: "Poppins", sans-serif;
+
+        @media (max-width: 768px) {
+          font-size: 2.5rem;
+        }
+      }
+
+      h5 {
+        font-size: 1.8rem;
+        color: #ccc;
+        font-family: "Roboto", sans-serif;
+        margin-top: 0.5rem;
+
+        @media (max-width: 768px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+
+    .scroll-prompt {
+      margin-top: 2rem;
+      .btn {
+        background: linear-gradient(135deg, #4a90e2, #7f9fef);
+        color: #fff;
+        border: none;
+        padding: 0.8rem 2.5rem;
+        border-radius: 30px;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: linear-gradient(135deg, #357ab7, #5d89d9);
+          transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+          font-size: 1rem;
+          padding: 0.6rem 2rem;
+        }
+      }
+    }
+  }
+
+  .visual-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .photo-frame {
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #4a90e2;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+      @media (max-width: 768px) {
+        width: 200px;
+        height: 200px;
+      }
+
+      .profile-photo {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .floating-icons {
+      display: flex;
+      gap: 1.5rem;
+
+      @media (max-width: 768px) {
+        gap: 1rem;
+      }
+
+      .icon {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background: white;
+        padding: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+
+        @media (max-width: 768px) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}
