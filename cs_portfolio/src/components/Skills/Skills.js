@@ -7,6 +7,7 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [categories, setCategories] = useState([]);
   const [activeCategory, setActiveCategory] = useState("");
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     sanityClient
@@ -28,6 +29,17 @@ const Skills = () => {
         setActiveCategory(Object.keys(groupedSkills)[0]);
       })
       .catch(console.error);
+
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const formatCategoryTitle = (category) => {
@@ -40,7 +52,7 @@ const Skills = () => {
       "cloud-computing": "Cloud Computing",
       "machine-learning-ai": "Machine Learning/AI",
       "productivity-tools": "Productivity Tools",
-      "design-tools": "Design Tools"
+      "design-tools": "Design Tools",
     };
     return titles[category] || category;
   };
@@ -69,50 +81,96 @@ const Skills = () => {
       <motion.div className="my-skills-container">
         <h1 className="my-skills-title">MY SKILLS</h1>
 
-        {/* Tab Bar */}
-        <motion.div className="skills-tab-bar">
-          {categories.map((category, index) => (
-            <motion.button
-              key={index}
-              className={`tab-button ${
-                activeCategory === category ? "active" : ""
-              }`}
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 4px 12px rgba(0,0,0,0.2)",
-              }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => setActiveCategory(category)}
-            >
-              {formatCategoryTitle(category)}
-            </motion.button>
-          ))}
-        </motion.div>
-
-        {/* Skills Display */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeCategory}
-            className="skills-display"
-            variants={skillVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-          >
-            {skills[activeCategory]?.map((skill, index) => (
-              <motion.div key={index} className="skill-card">
-                {skill.iconUrl && (
-                  <img
-                    src={skill.iconUrl}
-                    alt={skill.name}
-                    className="skill-icon"
-                  />
-                )}
-                <h3 className="skill-name">{skill.name}</h3>
-              </motion.div>
+        {isMobile ? (
+          // Mobile Accordion View
+          <div className="skills-accordion">
+            {categories.map((category, index) => (
+              <div key={index} className="accordion-item">
+                <button
+                  className={`accordion-button ${
+                    activeCategory === category ? "active" : ""
+                  }`}
+                  onClick={() =>
+                    setActiveCategory(
+                      activeCategory === category ? "" : category
+                    )
+                  }
+                >
+                  {formatCategoryTitle(category)}
+                </button>
+                <AnimatePresence>
+                  {activeCategory === category && (
+                    <motion.div
+                      className="accordion-content"
+                      variants={skillVariants}
+                      initial="hidden"
+                      animate="visible"
+                      exit="exit"
+                    >
+                      {skills[category]?.map((skill, skillIndex) => (
+                        <div key={skillIndex} className="skill-card">
+                          {skill.iconUrl && (
+                            <img
+                              src={skill.iconUrl}
+                              alt={skill.name}
+                              className="skill-icon"
+                            />
+                          )}
+                          <h3 className="skill-name">{skill.name}</h3>
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </div>
+        ) : (
+          // Desktop Tab View
+          <>
+            <motion.div className="skills-tab-bar">
+              {categories.map((category, index) => (
+                <motion.button
+                  key={index}
+                  className={`tab-button ${
+                    activeCategory === category ? "active" : ""
+                  }`}
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0px 4px 12px rgba(0,0,0,0.2)",
+                  }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {formatCategoryTitle(category)}
+                </motion.button>
+              ))}
+            </motion.div>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={activeCategory}
+                className="skills-display"
+                variants={skillVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+              >
+                {skills[activeCategory]?.map((skill, index) => (
+                  <motion.div key={index} className="skill-card">
+                    {skill.iconUrl && (
+                      <img
+                        src={skill.iconUrl}
+                        alt={skill.name}
+                        className="skill-icon"
+                      />
+                    )}
+                    <h3 className="skill-name">{skill.name}</h3>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </>
+        )}
       </motion.div>
     </motion.section>
   );
