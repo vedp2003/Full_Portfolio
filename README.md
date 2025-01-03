@@ -87,6 +87,6 @@ Ensure you have the following installed on your machine:
     
 4. **Access Servers**:
    
-  Access the frontend at http://localhost:3000. ; Acess the backend Studio at http://localhost:3333 to manage content
+  Access the frontend at http://localhost:3000 ; Acess the backend Studio at http://localhost:3333 to manage content
 
-
+---
