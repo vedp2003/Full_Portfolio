@@ -86,7 +86,8 @@ Ensure you have the following installed on your machine:
     npx sanity dev
     
 4. **Access Servers**:
-  Access the frontend at http://localhost:3000
+  Access the frontend at http://localhost:3000.
+
   Use the backend Studio at http://localhost:3333 to manage content
 
 
