@@ -62,6 +62,9 @@
           font-size: 1.2rem;
           margin: 0;
           color: #fff;
+          word-wrap: break-word; /* Prevent long text overflow */
+          overflow-wrap: anywhere; /* Break text in long words or email addresses */
+          line-height: 1.4;
         }
       }
     }
@@ -152,9 +155,25 @@
         width: 100%;
         max-width: 500px;
       }
+
+      .contact-info .info-item {
+        flex-direction: column; /* Stack icon and text vertically */
+        align-items: flex-start;
+        text-align: left;
+
+        .icon {
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem; /* Reduce font size for smaller screens */
+          text-align: left;
+        }
+      }
     }
   }
 }
+
 .status-message {
   margin-top: 1rem;
   font-size: 1.2rem;
