@@ -1,9 +1,11 @@
 # Full Portfolio Project
 
-This repository contains a full-stack portfolio project, showcasing frontend and backend implementations. It consists of two main components:
+https://vedpatel.vercel.app
+
+This repository contains my full-stack portfolio project, showcasing frontend and backend implementations. It consists of two main components:
 
 1. **Frontend (CS Portfolio)** - A React-based personal portfolio website.
-2. **Backend (Sanity Backend)** - A Sanity CMS backend for managing portfolio content such as projects, skills, and contact information.
+2. **Backend (Sanity Backend)** - A Sanity CMS backend for managing portfolio content such as projects and skills. 
 
 ---
 
@@ -49,15 +51,4 @@ This folder contains the Sanity CMS backend setup.
 
 ---
 
-## 🚀 Getting Started
 
-### Prerequisites
-- **Node.js** (v16 or above)
-- **npm** or **yarn**
-- **Sanity CLI** (for backend management)
-
-### Installation
-1. Clone the repository:
-   ```bash
-   git clone <repository-url>
-   cd FULL_PORTFOLIO
