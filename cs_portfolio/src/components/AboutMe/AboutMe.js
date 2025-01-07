@@ -33,7 +33,7 @@ const AboutMe = () => {
   return (
     <motion.section
       className="about-me-section"
-      id="about-me" // ID for progress bar tracking
+      id="about-me" 
       initial="hidden"
       animate="visible"
     >

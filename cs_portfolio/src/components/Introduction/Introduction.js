@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./Introduction.scss";
 
 const Introduction = () => {
@@ -27,32 +28,51 @@ const Introduction = () => {
               repeat={0}
             />
             {showSubtitle && (
-              <TypeAnimation
-                cursor
-                sequence={[
-                  500,
-                  "Software Engineer.",
-                  1000,
-                  "Creative Problem Solver.",
-                  1000,
-                  "Tech Enthusiast.",
-                  1000,
-                  "Innovative Thinker.",
-                ]}
-                speed={60}
-                wrapper="h5"
-                repeat={Infinity}
-              />
+              <>
+                <TypeAnimation
+                  cursor
+                  sequence={[
+                    500,
+                    "Software Engineer.",
+                    1000,
+                    "Creative Problem Solver.",
+                    1000,
+                    "Tech Enthusiast.",
+                    1000,
+                    "Innovative Thinker.",
+                  ]}
+                  speed={60}
+                  wrapper="h5"
+                  repeat={Infinity}
+                />
+                <div className="separator" /> {}
+              </>
             )}
           </div>
+
           <motion.div
-            className="scroll-prompt"
+            className="social-info"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2, duration: 0.6 }}
           >
-            <a href="#projects" className="btn PrimaryBtn">
-              View My Work
+            <a
+              href="https://github.com/vedp2003"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              <FaGithub className="icon" />
+              <span>Here's my GitHub</span>
+            </a>
+            <a
+              href="https://linkedin.com/in/vedp2003"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              <FaLinkedin className="icon" />
+              <span>Here's my LinkedIn</span>
             </a>
           </motion.div>
         </div>

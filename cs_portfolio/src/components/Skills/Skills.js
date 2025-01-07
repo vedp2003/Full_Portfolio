@@ -82,7 +82,7 @@ const Skills = () => {
         <h1 className="my-skills-title">MY SKILLS</h1>
 
         {isMobile ? (
-          // Mobile Accordion View
+          // Mobile View
           <div className="skills-accordion">
             {categories.map((category, index) => (
               <div key={index} className="accordion-item">

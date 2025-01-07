@@ -1,6 +1,6 @@
 .contact {
   padding: 3rem;
-  background: #3d405b; /* Updated for a darker, modern background */
+  background: #3d405b; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,10 @@
     .contact-info {
       flex: 1;
       background: #4e4c67;
-      color: #fff; /* Changed color for better contrast */
+      color: #fff; 
       padding: 2rem;
       border-radius: 20px;
-      text-align: left; /* Left-align for a modern look */
+      text-align: left; 
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 
       h1 {
@@ -32,17 +32,17 @@
 
       .info-item {
         display: flex;
-        align-items: center; /* Align icon and text vertically */
+        align-items: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
         padding: 1rem;
-        background: rgba(255, 255, 255, 0.1); /* Slightly lighter background */
+        background: rgba(255, 255, 255, 0.1);
         border-radius: 10px;
         transition: all 0.3s ease;
 
         &:hover {
           background: rgba(255, 255, 255, 0.2);
-          transform: scale(1.02); /* Slight hover scaling */
+          transform: scale(1.02); 
         }
 
         .icon {
@@ -62,8 +62,8 @@
           font-size: 1.2rem;
           margin: 0;
           color: #fff;
-          word-wrap: break-word; /* Prevent long text overflow */
-          overflow-wrap: anywhere; /* Break text in long words or email addresses */
+          word-wrap: break-word; 
+          overflow-wrap: anywhere; 
           line-height: 1.4;
         }
       }
@@ -91,7 +91,7 @@
 
         .form-group {
           display: flex;
-          flex-direction: column; /* Align labels above inputs */
+          flex-direction: column; 
           align-items: flex-start;
 
           label {
@@ -157,7 +157,7 @@
       }
 
       .contact-info .info-item {
-        flex-direction: column; /* Stack icon and text vertically */
+        flex-direction: column;
         align-items: flex-start;
         text-align: left;
 
@@ -166,7 +166,7 @@
         }
 
         p {
-          font-size: 1rem; /* Reduce font size for smaller screens */
+          font-size: 1rem; 
           text-align: left;
         }
       }

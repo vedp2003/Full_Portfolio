@@ -55,10 +55,10 @@ const Contact = () => {
 
   return (
     <section className="contact">
-      {/* Toast notification container */}
+      {}
       <ToastContainer />
       <div className="contact-container">
-        {/* Contact Info Section */}
+        {}
         <div className="contact-info">
           <h1>Contact Me</h1>
           <div className="info-item">
@@ -75,7 +75,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Contact Form Section */}
+        {}
         <div className="contact-card">
           <h2>Send Me a Message</h2>
           <form onSubmit={handleSubmit}>
