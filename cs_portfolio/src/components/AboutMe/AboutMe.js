@@ -54,12 +54,15 @@ const AboutMe = () => {
         <div className="about-me-center">
           <h1 className="about-me-title">About Me</h1>
           <p className="about-me-description">
-            Hi! This is <strong>Ved Patel</strong>. I am a recent graduate from Rutgers University, with a B.S. in Computer Science and Data Science, along with having completed a minor in Business Administration. I'm a passionate and
-            dedicated developer with a strong interest in web development, mobile development, data analysis, and machine learning. I have honed my skills through various hands-on projects and am constantly eager to learn new
+            Hi! This is <strong>Ved Patel</strong>. I graduated from Rutgers University in May 2026 with a B.S. in Computer Science and Data Science, along with a minor in Business Administration. I'm a passionate and
+            dedicated developer with a strong interest in web development, AI, mobile development, data analysis, and machine learning. I have honed my skills through professional experience as well as various hands-on projects. I am constantly eager to learn new
             technologies.
           </p>
           <p className="about-me-description">
-            I love working collaboratively towards building new solutions to real-life and practical issues, such as being able to create a robust machine learning model to assist with predicting healthcare/business/sports trends. I'm currently pursuing certifications in both AWS Cloud Practitioner and Microsoft Azure Fundamentals.
+            I currently work at KPMG as a full-time Software Engineer, where I focus on integrating software and AI solutions into business workflows. My work includes full-stack engineering, developing agentic workflows, implementing Retrieval-Augmented Generation (RAG) pipelines, and building practical AI-driven applications that address real-world challenges. I'm excited about leveraging emerging technologies to create innovative and impactful solutions, while continuing to expand my expertise in cloud computing, AI, and scalable systems.
+          </p>
+          <p className="about-me-description">
+            I also have certifications in Microsoft Azure Fundamentals, Microsoft Azure AI Fundamentals, and Microsoft Azure Data Fundamentals, and I am actively pursuing more advanced associate-level certifications (AWS, Azure) to continue deepening my expertise in cloud and AI technologies.
           </p>
         </div>
         <div className="about-me-right">
